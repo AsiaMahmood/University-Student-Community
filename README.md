@@ -37,6 +37,7 @@ This website made for University Students to share with each other any topic or 
  ```
 
 ## Running Server:
- DO NOT FORGET TO: `npm i`
+ DO NOT FORGET TO: 
+ Download node-modules   `npm i`
  Run `ng serve`
  Navigate `http://localhost:4200/`
