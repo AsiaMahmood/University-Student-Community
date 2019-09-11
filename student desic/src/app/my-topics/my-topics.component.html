@@ -1,0 +1,59 @@
+<body>
+<div class="cards" >
+  <div class="uk-card uk-card-default uk-width-1-2@m"  *ngFor="let item of topicArray">
+    <div class="uk-card-header">
+        <div class="uk-grid-small uk-flex-middle" uk-grid>
+            <div class="uk-width-auto">
+                <img class="uk-border-circle profileImage" src="{{profileImage}}">
+            </div>
+            <div class="uk-width-expand">
+                <h3 class="uk-card-title uk-margin-remove-bottom">{{item.title}}</h3>
+            </div>
+        </div>
+    </div>
+    <div class="uk-card-body">
+        <p>{{ item.description}}</p>
+    </div>
+    <div class="uk-card-footer">
+        <button class="uk-button uk-button-default">Read More</button>
+        <button class="uk-button uk-button-primary" uk-toggle="target: #modal-Edit" (click)="editForm(item.$key)">Edit</button>
+        <button class="uk-button uk-button-danger" uk-toggle="target: #modal-Delete" (click)="editForm(item.$key)">Delete</button>
+        <!-- This is the Edit modal -->
+        <div id="modal-Edit" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body">                            
+                <form>
+                    <fieldset class="uk-fieldset">
+                        <div class="uk-margin">
+                            <input class="uk-input" type="text" placeholder="Title" name="title" [(ngModel)]="data.title">
+                        </div>
+                        <div class="uk-margin">
+                            <textarea class="uk-textarea" rows="5" placeholder="Type your Topic here" name="description" [(ngModel)]="data.description"></textarea>
+                        </div>
+                        <div class="uk-margin">
+                            <div class="uk-inline">
+                                <input class=" uk-button" type="file" name="imageUrl" [(ngModel)]="data.imageUrl">
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+                <p class="uk-text-right">
+                    <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+                    <button class="uk-button uk-button-primary uk-modal-close" type="button" (click)="onEdit(item.$key)" >Save</button>
+                </p>
+            </div>
+        </div>
+        <!-- This is the Delete modal -->
+        <div id="modal-Delete" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body">
+                <h2 class="uk-modal-title" style="text-align: center;">Delete</h2>
+                <p>Are you sure you want to Delete this Topic?!</p>
+                <p class="uk-text-right">
+                    <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+                    <button class="uk-button uk-button-primary uk-modal-close" type="button" (click)="onDelete(data.$key)">DELETE</button>
+                </p>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+</body>

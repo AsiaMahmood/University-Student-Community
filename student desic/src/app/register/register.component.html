@@ -1,0 +1,40 @@
+<body>
+
+    <div class="register uk-padding">
+        <div class="form-register uk-position-center uk-card uk-card-default uk-card-body uk-width">
+            <h3 class="uk-card-title">Register</h3>
+            <form>
+                <fieldset class="uk-fieldset">
+                
+                    <div class="uk-margin">
+                        <input class="uk-input" type="text" placeholder="Enter your Username" name="username" [(ngModel)]="user.username">
+                    </div>
+                    <div class="uk-margin">
+                        <input class="uk-input" type="email" placeholder="Enter your  Email" name="email" [(ngModel)]="user.email">
+                    </div>
+                    <div class="uk-margin">
+                        <input class="uk-input" type="password" placeholder="Enter your Password" name="password" [(ngModel)]="user.password">
+                    </div>
+                    <div class="uk-margin">
+                        <input class="uk-input" type="text" placeholder="Enter your University Name" name="universityName" [(ngModel)]="user.universityName">
+                    </div>
+                    <div class="uk-margin">
+                        <input class="uk-input" type="text" placeholder="Enter your College Name" name="collegeName" [(ngModel)]="user.collegeName">
+                    </div>
+                    <div class="uk-margin">
+                        <div class="uk-inline">
+                            <label for="file">Profile Image </label>
+                            <input class=" uk-button" type="file" name="urlImage" [(ngModel)]="user.urlImage">
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <button class="uk-button uk-button-primary" (click)="signUpUser(user);">Register</button>
+                    </div>
+    
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    
+    
+</body>

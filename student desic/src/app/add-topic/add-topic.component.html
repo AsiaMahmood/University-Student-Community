@@ -1,0 +1,25 @@
+<body>
+    <div class="topic uk-padding">
+        <div class="form-topic uk-position-center uk-card uk-card-default uk-card-body uk-width">
+            <h3 class="uk-card-title">Open New Topic</h3> 
+            <form>
+                <fieldset class="uk-fieldset">
+                    <div class="uk-margin">
+                        <input class="uk-input" type="text" placeholder="Title" name="title" [(ngModel)]="topic.title">
+                    </div>
+                    <div class="uk-margin">
+                        <textarea class="uk-textarea" rows="5" placeholder="Type your Topic here" name="description" [(ngModel)]="topic.description"></textarea>
+                    </div>
+                    <div class="uk-margin">
+                        <div class="uk-inline">
+                            <input class=" uk-button" type="file" name="imageUrl" [(ngModel)]="topic.imageUrl">
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <button class="uk-button uk-button-primary" (click)="insertTopic(topic)">Submit</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</body>

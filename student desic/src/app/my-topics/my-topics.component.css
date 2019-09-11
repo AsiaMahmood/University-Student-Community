@@ -1,0 +1,14 @@
+html{
+    background: #e7e7e7;
+}
+
+body{
+    background: #e7e7e7;
+}
+.uk-card{
+    margin:40px auto;
+}
+.profileImage{
+    width: 60px;
+    height: 60px;
+}

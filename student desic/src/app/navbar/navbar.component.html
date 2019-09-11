@@ -1,0 +1,53 @@
+<nav class="uk-navbar-container" uk-navbar>
+  <div class="uk-navbar-left">
+
+      <ul class="uk-navbar-nav">
+          <li class="uk-active"><a routerLink=''><strong>Home</strong></a></li>
+          <li class="uk-active" *ngIf="!CheckUser"><a routerLink="register">Register</a></li>
+          <li class="uk-active" *ngIf="!CheckUser"><a routerLink="login">Login</a></li>
+          <li class="uk-active"><a routerLink="allTopics">All Topics</a></li>
+          <li class="uk-active" *ngIf="CheckUser"><a routerLink="myTopics">My Topics</a></li>
+          <li class="uk-active"><a routerLink="">About Us</a></li>
+      </ul>
+
+  </div>
+  <div class="uk-navbar-right">
+  
+      <ul class="uk-navbar-nav">
+          <li>
+              <a href="#" style="padding-right: 60px;">My Account</a>
+              <div class="uk-navbar-dropdown">
+                  <ul class="uk-nav uk-navbar-dropdown-nav">
+                      <li class="uk-active"><a routerLink="addTopic">Add Topic</a></li>
+                      <li class="uk-active"><a href="#" (click)="logoutUser();"  *ngIf="CheckUser">Logout</a></li>
+                  </ul>
+              </div>
+          </li>
+      </ul>
+
+  </div>
+</nav>
+
+   
+<!-- 
+  <li>
+          <a href="#">MySkill</a>
+          <div class="uk-navbar-dropdown">
+              <ul class="uk-nav uk-navbar-dropdown-nav">
+                  <li class="uk-active"><a href="#">Active</a></li>
+                  <li><a href="#">Item</a></li>
+                  <li><a href="#">Item</a></li>
+              </ul>
+          </div>
+      </li>
+      <li>
+        <a href="#">Skills</a>
+        <div class="uk-navbar-dropdown">
+            <ul class="uk-nav uk-navbar-dropdown-nav">
+                <li class="uk-active"><a href="#">Active</a></li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+            </ul>
+        </div>
+      </li>
+    -->

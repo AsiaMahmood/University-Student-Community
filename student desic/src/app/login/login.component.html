@@ -1,0 +1,22 @@
+<body>
+<div class="login uk-padding">
+    <div class="form-login uk-position-center uk-card uk-card-default uk-card-body uk-width">
+        <h3 class="uk-card-title">Login</h3>      
+        <form>
+            <fieldset class="uk-fieldset">
+            
+                <div class="uk-margin">
+                    <input class="uk-input" type="email" placeholder="Enter your email" name="email" [(ngModel)]="user.email">
+                </div>
+                <div class="uk-margin">
+                    <input class="uk-input" type="password" placeholder="Enter your password" name="password" [(ngModel)]="user.password">
+                </div>
+                <div class="uk-margin">
+                    <button class="uk-button uk-button-primary" (click)='loginUser(user);'>Login</button>
+                </div>
+
+            </fieldset>
+        </form>
+  </div>
+</div>
+</body>
