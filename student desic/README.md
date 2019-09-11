@@ -7,7 +7,7 @@ Angular 6 firebase (Authentication and CRUD)
 This website made for University Students to share with each other any topic or any experience they get through
 
 ## Demo Video
-  (https://www.youtube.com/watch?v=ZCrmUyi4tXM)
+  https://www.youtube.com/watch?v=ZCrmUyi4tXM
 
 ## Technologies:
 1. Angular6 Firebase 
